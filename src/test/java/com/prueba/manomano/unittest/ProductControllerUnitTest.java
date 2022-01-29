@@ -31,8 +31,6 @@ class ProductControllerUnitTest {
   @MethodSource("paramsForMissingParamsTest")
   void getProducts_WhenMissingParams_ShouldReturnBadRequest(MockHttpServletRequestBuilder request) throws Exception {
     mockMvc.perform(request).andExpect(MockMvcResultMatchers.status().isBadRequest());
-    mockMvc.perform(request).andExpect(MockMvcResultMatchers.status().isBadRequest());
-    mockMvc.perform(request).andExpect(MockMvcResultMatchers.status().isBadRequest());
   }
 
   private static Stream<Arguments> paramsForMissingParamsTest() {
